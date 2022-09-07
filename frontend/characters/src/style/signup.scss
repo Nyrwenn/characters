@@ -1,0 +1,33 @@
+.signup_wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_wrapper{
+    width: 90%;
+   display: flex;
+
+}
+
+.form_label{
+    margin-top: 40px;
+}
+
+.form_container{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 28px 2px rgba(0,0,0,0.49);
+}
+
+.clic_on{
+    font-weight: bold;
+    margin-top: 80px;
+    cursor: pointer;
+    text-decoration: underline; 
+    
+}
