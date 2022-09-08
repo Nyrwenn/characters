@@ -1,0 +1,18 @@
+@mixin FC{
+    display: flex; 
+    flex-direction: column;
+}
+
+@mixin FR{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin fullWidth{
+    width: 100%;
+}
+
+@mixin center{
+    margin-left: auto;
+    margin-right: auto; 
+}

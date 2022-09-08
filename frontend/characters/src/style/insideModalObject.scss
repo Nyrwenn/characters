@@ -1,0 +1,19 @@
+@import './mixins';
+
+.inside_container{
+    @include FC;
+}
+
+.txt_create{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+#description{
+    height: 150px;
+    border: solid black 2px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}

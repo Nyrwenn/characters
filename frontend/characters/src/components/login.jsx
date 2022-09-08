@@ -4,7 +4,7 @@ import { postLogin } from "../utils/path.js";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -45,6 +45,7 @@ function Login() {
             </FormLabel>
             <Input
               id="password"
+              type="password"
               className="form_label"
               required
               value={password}

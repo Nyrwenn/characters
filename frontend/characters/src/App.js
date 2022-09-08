@@ -1,11 +1,12 @@
 import Signup from "./components/signup.jsx";
 import Login from "./components/login.jsx";
+import Home from "./pages/home.jsx";
 import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { getMe } from "./utils/path";
 import { useEffect, useState } from "react";
 
-function App() {
+function App(props) {
   const [connected, setConnected] = useState(false);
 
   useEffect(() => {
@@ -29,13 +30,17 @@ function App() {
 
   return (
     <div>
-      {connected ? (
+      {!connected ? (
         <Routes>
-          <Route exact path="/" element={<Login />} />
+          <Route
+            exact
+            path="/"
+            element={<Login setConnected={props.setConnected} />}
+          />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       ) : (
-        <div>prout</div>
+        <Home auth={connected} />
       )}
     </div>
   );
