@@ -1,7 +1,7 @@
 @import './mixins';
 
 .card_wrapper{
-    width: 25%;
+    width: 2%;
     display: flex;
     flex-direction: column;
     height: 450px;
@@ -10,6 +10,17 @@
     justify-content: space-between;
     margin-right: 40px;
     margin-bottom: 20px;
+
+    @include tablet{
+       width: 28%;
+       height: auto;
+       @include center;
+    }
+    @include mobile-only{
+        min-width: 90%;
+        @include center;
+        height: auto;
+    }
 }
 
 .img_container{

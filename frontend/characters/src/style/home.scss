@@ -7,14 +7,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1900px;
 
 }
 
 .home_wrapper{
  @include fullWidth;
  display:flex;
-   
- 
+
 }
 .test{
     @include FR;
@@ -23,7 +23,15 @@
     @include center;
     justify-content: center;
     flex-wrap: wrap;
-    
+
+    @include tablet{
+        margin-top: 80px;
+    }
+
+    @include mobile-only{
+        flex-direction: column;
+        margin-top: 80px;
+     }
 
 }
 
@@ -47,6 +55,13 @@
     color: #F4BFBF;
     font-size: 40px;
     margin-left: 5%;
-    cursor: pointer;
+    cursor: pointer;  
 
+    @include tablet{
+        position: absolute;
+    }
+
+    @include mobile-only{
+        position: absolute;
+    }
 }

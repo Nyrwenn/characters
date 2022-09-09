@@ -4,11 +4,13 @@ import { useState } from "react";
 import { postSignup } from "../utils/path.js";
 import axios from "axios";
 import Header from "./header";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const send = (e) => {
     e.preventDefault();
@@ -21,7 +23,7 @@ function Signup() {
     axios
       .post(postSignup, profile)
       .then(function (res) {
-        console.log("Connected.");
+        navigate("/");
       })
       .catch(function (error) {
         console.log(error);

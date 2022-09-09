@@ -38,7 +38,10 @@ function App() {
             path="/"
             element={<Login setConnected={setConnected} />}
           />
-          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/signup"
+            element={<Signup setConnected={setConnected} />}
+          />
         </Routes>
       ) : (
         <Home auth={connected} />

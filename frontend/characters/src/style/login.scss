@@ -18,8 +18,17 @@
 }
 
 .login_wrapper{
-    width: 20%;
+    max-width: 30%;
     @include center;
+
+    @include tablet{
+        width: 40%
+    }
+
+    @include mobile-only{
+        width: 70%;
+        @include center;
+    }
 }
 
 .form_login_wrapper{
@@ -37,6 +46,7 @@
     width: 100%;
     padding: 5%;
     border-radius: 15px;
+    margin-bottom: 30px;
     -webkit-box-shadow: 3px 1px 8px 5px rgba(241,112,255,0.25); 
     box-shadow: 3px 1px 8px 5px rgba(241,112,255,0.25);
 }
@@ -49,6 +59,7 @@
     cursor: pointer;
     text-decoration: underline; 
     transition: 0,5s;
+   
     
     &:hover{
         color: lighten(#E94560, 9%);
@@ -62,6 +73,10 @@
     flex-direction: column;
     border-radius: 5px;
     border: none;
+
+    @include mobile-only{
+        width: 60%;
+    }
    
 }
 
@@ -94,5 +109,8 @@
 
 .form_log_label{
     font-weight: bold;
+    @include mobile-only{
+        font-size: 14px;
+    }
 }
 

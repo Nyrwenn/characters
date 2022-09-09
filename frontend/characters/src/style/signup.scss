@@ -3,6 +3,17 @@
 .signup_wrapper{
     min-width: 30%;
     @include center;
+    max-width: 40%;
+
+    @include tablet{
+        width: 50%;
+    }
+
+    @include mobile-only{
+        width: 80%;
+        display: flex;
+        @include center;
+    }
 }
 
 .form_wrapper{
@@ -14,8 +25,10 @@
 
 .form_label{
     display: flex;
-    font-weight: bold
-    
+    font-weight: bold;
+    @include mobile-only{
+        font-size: 14px;
+    }
 }
 
 .form_signup_container{
@@ -45,5 +58,11 @@
     border-radius: 5px;
     border: none;
     width: 60%;
+
+    @include mobile-only{
+        width: 55%;
+    }
+
+
    
 }

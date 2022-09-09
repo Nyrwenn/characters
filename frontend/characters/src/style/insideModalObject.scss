@@ -2,6 +2,10 @@
 
 .insideModal_wrapper{
     @include FC;
+
+    @include mobile-only{
+        @include fullWidth;
+    }
 }
 
 .lil_container{

@@ -17,6 +17,7 @@
     // background: #F4BFBF;
     justify-content: center;
 
+  
 }
 
 .logo{
@@ -28,7 +29,7 @@
 }
 
 .metaWrapper{
-    width: 7%;
+    max-width: 7%;
     overflow: hidden;
     margin-right: 5%;
     display: flex;
@@ -47,6 +48,11 @@ h1{
     color: white;
     font-size: 58px;
     cursor:pointer;
+    @include mobile-only{
+        font-size: 40px;
+        
+    }
+
 
 }
 

@@ -9,6 +9,14 @@
     box-shadow: 0px 10px 20px 0.2px rgba(0,0,0,0.2);
     padding: 5px;
     background-color: white;
+
+    @include tablet{
+        width: 60%;
+    }
+
+    @include mobile-only{
+        width: 80%;
+    }
 }
 
 .modal_container{
@@ -20,6 +28,8 @@
     width: 100vw;
     height: 100vh;
     @include FC;
+
+   
 }
 
 .modal_header{
@@ -28,6 +38,7 @@
     font-weight: bold; 
     font-size: 26px;
     margin-bottom: 20px;
+   
 }
 
 
@@ -36,6 +47,14 @@
     width: 50%;
     @include center;
    margin-bottom: 10px;
+
+   @include tablet{
+    width: 90%;
+   }
+
+   @include mobile-only{
+    @include fullWidth
+    }
 }
 
 
