@@ -1,0 +1,98 @@
+@import './mixins';
+
+.app_wrapper{
+    background: black;
+    width: 100%;
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.big_wrapper{
+    width: 100%; 
+    height: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.login_wrapper{
+    width: 20%;
+    @include center;
+}
+
+.form_login_wrapper{
+    width: 90%;
+   display: flex;
+   flex-direction: column;
+}
+
+.form_container{
+    display: flex;
+    @include center;
+    background-image: linear-gradient(to right top, #16213e, #1c264c, #252a59, #302e66, #3e3173, #54337b, #6b3381, #823285, #a23081, #be3179, #d6376e, #e94560);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+    border-radius: 15px;
+    -webkit-box-shadow: 3px 1px 8px 5px rgba(241,112,255,0.25); 
+    box-shadow: 3px 1px 8px 5px rgba(241,112,255,0.25);
+}
+
+.clic_on{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline; 
+    transition: 0,5s;
+    
+    &:hover{
+        color: lighten(#E94560, 9%);
+        transition: 0.5s;
+    }
+    
+}
+
+.input_log_label{
+    display: flex; 
+    flex-direction: column;
+    border-radius: 5px;
+    border: none;
+   
+}
+
+.lil_wrap{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#create{
+    @include center;
+    display: flex; 
+    width: auto;
+    font-weight: bold; 
+    cursor: pointer; 
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    padding: 4px 8px 4px 8px;
+    background: white;
+    transition: 0.75s;
+    margin-top: 5px;
+
+    &:hover{
+        background: lighten(#E94560, 9%);
+        transition: 0.75s;
+    }
+}
+
+.form_log_label{
+    font-weight: bold;
+}
+

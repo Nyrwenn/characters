@@ -5,6 +5,9 @@ import Object from "../components/object";
 import { getAll } from "../utils/path.js";
 import axios from "axios";
 import "../style/home.scss";
+import Header from "../components/headerPages";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 
 function Home(props) {
   const [showModal, setShowModal] = useState(false);
@@ -35,21 +38,33 @@ function Home(props) {
   }, [auth, isLoad]);
 
   return (
-    <div className="home_wrapper">
-      <button onClick={handleToggleModal}>+++</button>
-      <Modal show={showModal} close={handleToggleModal}>
-        <InsideModal
-          close={handleToggleModal}
-          auth={auth}
-          setIsLoad={setIsLoad}
+    <div className="big_home_wrapper">
+      <Header />
+      <div className="home_wrapper">
+        <FontAwesomeIcon
+          icon={faSquarePlus}
+          onClick={handleToggleModal}
+          className="icon_plus"
         />
-      </Modal>
-      <div className="test">
-        {list.map((object, i) => (
-          <div className="project_wrapper" key={i}>
-            <Object object={object} setIsLoad={setIsLoad} auth={auth} />
+        <div className="inside_wrapper">
+          <Modal show={showModal} close={handleToggleModal}>
+            <InsideModal
+              close={handleToggleModal}
+              auth={auth}
+              setIsLoad={setIsLoad}
+            />
+          </Modal>
+          <div className="test">
+            {list.map((object, i) => (
+              <Object
+                key={i}
+                object={object}
+                setIsLoad={setIsLoad}
+                auth={auth}
+              />
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

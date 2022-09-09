@@ -24,9 +24,6 @@ function InsideModalCreate(props) {
           e.target.image.files[0],
           e.target.image.files[0].name
         );
-
-        console.log("update here ? change image");
-
         data.set("texte", JSON.stringify(data.texte));
 
         axios
@@ -44,7 +41,6 @@ function InsideModalCreate(props) {
             console.log(error);
           });
       } else {
-        console.log("here");
         axios
           .put(
             putObject + object._id,
@@ -72,6 +68,7 @@ function InsideModalCreate(props) {
       );
       data.set("title", title);
       data.set("description", description);
+      data.set("userId", auth.userId);
 
       axios
         .post(postObject, data, {
@@ -94,21 +91,25 @@ function InsideModalCreate(props) {
   return (
     <div className="insideModal_wrapper">
       <form className="inside_modal_container" onSubmit={(e) => send(e)}>
-        <label htmlFor="objectTitle" className="txt_create">
-          Title:
-        </label>
-        <input
-          type="text"
-          id="objectTitle"
-          required
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <label htmlFor="image" className="txt_create">
-          Your picture
-        </label>
-        <div className="imgToDisplay_container">
-          <img className="imgToDisplay" src={image} alt="Your personnage" />
+        <div className="lil_container">
+          <label htmlFor="objectTitle" className="txt_create">
+            Title
+          </label>
+          <input
+            type="text"
+            id="objectTitle"
+            required
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </div>
+        <div className="lil_container">
+          <label htmlFor="image" className="txt_create">
+            Your picture
+          </label>
+          <div className="imgToDisplay_container">
+            <img className="imgToDisplay" src={image} alt="Your personnage" />
+          </div>
         </div>
         <input
           type="file"
@@ -121,19 +122,22 @@ function InsideModalCreate(props) {
             setChangeImage(true);
           }}
         />
-        <label htmlFor="description" className="txt_create">
-          Description
-        </label>
-        <textarea
-          id="description"
-          name="description"
-          className="txt_decription"
-          maxLength="2500"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
 
-        <input type="submit" id="create" value="Post" />
+        <div className="lil_container">
+          <label htmlFor="description" className="txt_create">
+            Description
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            className="txt_decription"
+            maxLength="2500"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+
+        <input type="submit" id="post" value="Post" />
       </form>
     </div>
   );

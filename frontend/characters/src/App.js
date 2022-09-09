@@ -5,8 +5,9 @@ import { Routes, Route } from "react-router-dom";
 import axios from "axios";
 import { getMe } from "./utils/path";
 import { useEffect, useState } from "react";
+import "./style/login.scss";
 
-function App(props) {
+function App() {
   const [connected, setConnected] = useState(false);
 
   useEffect(() => {
@@ -29,13 +30,13 @@ function App(props) {
   }, [connected]);
 
   return (
-    <div>
+    <div className="app_wrapper">
       {!connected ? (
         <Routes>
           <Route
             exact
             path="/"
-            element={<Login setConnected={props.setConnected} />}
+            element={<Login setConnected={setConnected} />}
           />
           <Route path="/signup" element={<Signup />} />
         </Routes>

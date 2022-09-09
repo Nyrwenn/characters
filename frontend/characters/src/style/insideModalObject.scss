@@ -1,7 +1,14 @@
 @import './mixins';
 
-.inside_container{
+.insideModal_wrapper{
     @include FC;
+}
+
+.lil_container{
+    @include FR;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .txt_create{
@@ -29,4 +36,35 @@
     border: solid black 2px;
     margin-bottom: 10px;
     border-radius: 15px;
+}
+
+#post{
+    @include center;
+    display: flex; 
+    width: auto;
+    font-weight: bold; 
+    cursor: pointer; 
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    padding: 4px 8px 4px 8px;
+    background: #F4BFBF;
+    transition: 0.75s;
+    margin-top: 5px;
+    color: white;
+
+    &:hover{
+        background: darken(#F4BFBF, 20%);
+        transition: 0.75s;
+    }
+}
+
+#image{
+    margin-bottom: 20px;
+}
+
+#objectTitle{
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
 }

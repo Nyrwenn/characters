@@ -1,43 +1,67 @@
 @import './mixins';
 
 .card_wrapper{
-    width: 80%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     height: 450px;
-    background: blue;
+    border-radius: 10px;
+    background-image: linear-gradient(to right top, #0f3460, #193568, #253670, #323777, #40367d, #573682, #6d3584, #823285, #a23081, #be3179, #d6376e, #e94560);
     justify-content: space-between;
+    margin-right: 40px;
+    margin-bottom: 20px;
 }
 
 .img_container{
-    width: 90%;
+    width: 95%;
     @include center;
-   height: 200px;
-    margin-top: 10px;
-    background: pink;
+   height: 225px;
+    margin-top: 5px;
     overflow: hidden;
-
+    background: F4BFBF;
+    border-radius: 10px;
+    display: flex;
 }
 
 .img{
-    @include fullWidth;
-    object-fit: contain;
-    height: 100%;
-   
+   @include fullWidth;
+    object-fit: cover;   
+    display: flex; 
+    align-self: center;
+    
 }
 
 .info_container{
     margin-left: 2%;
-    background: lightsalmon;
     @include FC;    
 
 }
 
-.icon{
+.icons_container{
     display: flex; 
-    align-self: flex-end;
+    justify-content: space-between;
+}
+
+.icon{
     margin-bottom: 2%;
     margin-right: 2%;
     font-size: 20px;
-    background: yellow;
+    cursor: pointer;
+    color: #F4BFBF;
+}
+
+.icon_trash{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    font-size:20px;
+    cursor: pointer;
+    color:#F4BFBF;
+}
+
+.description_content{
+    font-size: 18px;
+}
+
+h2{
+    font-size: 30px;
 }

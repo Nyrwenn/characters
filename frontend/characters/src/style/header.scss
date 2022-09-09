@@ -1,0 +1,63 @@
+@import './mixins';
+
+.header_wrapper{
+    display: flex; 
+    width: 100%;
+    height: 15%;
+    background: #F4BFBF;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+}
+
+.headerPages_wrapper{
+    display: flex; 
+    @include fullWidth;
+    height: 15%;
+    // background: #F4BFBF;
+    justify-content: center;
+
+}
+
+.logo{
+    margin-left: 5%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.metaWrapper{
+    width: 7%;
+    overflow: hidden;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.metamask{
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer
+}
+
+h1{
+    display: flex;
+    color: white;
+    font-size: 58px;
+    cursor:pointer;
+
+}
+
+.logout_wrapper{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.logout{
+    color:#F4BFBF;
+    font-size: 20px;
+}

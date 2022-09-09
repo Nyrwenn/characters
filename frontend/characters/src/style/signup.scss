@@ -1,33 +1,49 @@
+@import './mixins';
+
 .signup_wrapper{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 30%;
+    @include center;
 }
 
 .form_wrapper{
     width: 90%;
    display: flex;
+   flex-direction: column;
 
 }
 
 .form_label{
-    margin-top: 40px;
-}
-
-.form_container{
     display: flex;
-    justify-content: center;
-    width: 30%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 28px 2px rgba(0,0,0,0.49);
+    font-weight: bold
+    
 }
 
-.clic_on{
-    font-weight: bold;
-    margin-top: 80px;
-    cursor: pointer;
-    text-decoration: underline; 
-    
+.form_signup_container{
+    display: flex;
+    @include center;
+    background-image: linear-gradient(to right top, #16213e, #1c264c, #252a59, #302e66, #3e3173, #54337b, #6b3381, #823285, #a23081, #be3179, #d6376e, #e94560);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5%;
+    border-radius: 15px;
+    -webkit-box-shadow: 3px 1px 8px 5px rgba(241,112,255,0.25); 
+    box-shadow: 3px 1px 8px 5px rgba(241,112,255,0.25);
+}
+
+.mini_wrap{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input_signup{
+    display: flex; 
+    height: 20px;
+    align-self:center;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+   
 }
