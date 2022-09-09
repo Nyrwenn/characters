@@ -9,7 +9,7 @@ First you have to install your backend environment.
 - Create a folder `images`.
 - Create a `.env` file in which you have to create 3 const:
   PORT= "the port to run your server"
-  MONGODB= if you have an account, create a database and configure it with your ID.
+  MONGO= if you have an account, create a database and configure it with your ID.
   If you haven't one, you can use this path: mongodb+srv://Admin:0b1m5nc5bhTxaETd@characters.0ofqprr.mongodb.net/?retryWrites=true&w=majority
   PassJWT = "your secret key".
 
