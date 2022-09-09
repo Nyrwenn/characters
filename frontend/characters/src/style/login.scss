@@ -1,7 +1,7 @@
 @import './mixins';
 
 .app_wrapper{
-    background: black;
+    background: #060606;
     width: 100%;
     min-height: 100vh;
     display: flex; 
@@ -73,6 +73,7 @@
     flex-direction: column;
     border-radius: 5px;
     border: none;
+    width: 65%;
 
     @include mobile-only{
         width: 60%;

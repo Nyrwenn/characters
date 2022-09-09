@@ -1,7 +1,7 @@
 @import './mixins';
 
 .overlay{
-    width: 40%;
+    width: 30%;
     margin: auto;
     margin-top: 7%;
     @include FC;
@@ -11,7 +11,7 @@
     background-color: white;
 
     @include tablet{
-        width: 60%;
+        width: 50%;
     }
 
     @include mobile-only{

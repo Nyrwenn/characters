@@ -1,3 +1,51 @@
+# Requirements:
+
+- Install NodeJS: https://nodejs.org/en/
+
+# BACKEND ENVIRONMENT.
+
+First you have to install your backend environment.
+
+- Create a folder `images`.
+- Create a `.env` file in which you have to create 3 const:
+  PORT= "the port to run your server"
+  MONGODB= if you have an account, create a database and configure it with your ID.
+  If you haven't one, you can use this path: mongodb+srv://Admin:0b1m5nc5bhTxaETd@characters.0ofqprr.mongodb.net/?retryWrites=true&w=majority
+  PassJWT = "your secret key".
+
+# Install the server
+
+Be sure to be in the folder `backend`.
+Open a new terminal and then write `npm install`.
+
+# Run the server
+
+To run the server write `nodemon server` or `node server` in your terminal.
+
+# FONTEND ENVIRONMENT
+
+# Install the server
+
+Be sure to be in the folder `frontend`.
+Open a new terminal and then write `npm install `
+
+# Define the path
+
+Go to the folder `src`, then go to the folder `utils` and select the file `path.js` and check if the `const local`is the good one. If it isn't change it with your host.
+
+Please, don't touche the others const, it could broke the app.
+
+### `npm start`
+
+To run the server.
+
+# INSTRUCTIONS
+
+On this app, you can create an account, and log yourself. Then, you have a home page on which some cards about video game characters are displayed. The user who creates this cards can update/delete them. If you're not the good user you can't.
+You can also create your cards with the button "+".
+
+You can also log yourself with metamask, you just have to click on the logo and select your account. (You have to have a metamask account...).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

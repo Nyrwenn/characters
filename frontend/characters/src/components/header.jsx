@@ -1,6 +1,6 @@
 import "../style/header.scss";
-import img from "/Users/mr-gateau/characters/frontend/characters/src/MetaMask_Fox.png";
 import { Link } from "react-router-dom";
+import Metamask from "../Metamask";
 
 function Header() {
   return (
@@ -10,9 +10,7 @@ function Header() {
           <h1>Characters</h1>
         </div>
       </Link>
-      <div className="metaWrapper">
-        <img src={img} alt="logo metamask" className="metamask" />
-      </div>
+      <Metamask />
     </div>
   );
 }
