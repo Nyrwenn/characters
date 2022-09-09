@@ -1,5 +1,5 @@
 import { useMetaMask } from "metamask-react";
-import img from "/Users/mr-gateau/characters/frontend/characters/src/MetaMask_Fox.png";
+import img from "./MetaMask_Fox.png";
 
 function Metamask() {
   const { status, connect, account, chainId } = useMetaMask();
