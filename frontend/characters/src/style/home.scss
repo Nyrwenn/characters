@@ -1,0 +1,21 @@
+@import './mixins';
+
+.home_wrapper{
+    @include fullWidth;
+ 
+}
+
+.test{
+    background: red;
+    @include FR;
+    margin-top: 20px;
+    width: 90%;
+    @include center;
+}
+
+.project_wrapper{
+    width: 70%;
+    @include center;
+    @include FR;
+    background: green;
+}

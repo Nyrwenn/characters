@@ -11,6 +11,19 @@
     
 }
 
+.imgToDisplay_container{
+    width: 90%;
+    height: 200px;
+    @include center;
+    overflow: hidden;
+}
+
+.imgToDisplay{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 #description{
     height: 150px;
     border: solid black 2px;

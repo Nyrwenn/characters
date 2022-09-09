@@ -6,7 +6,6 @@ function CreateObject(props) {
   if (!show) {
     return null;
   }
-
   return (
     <div className="modal_container">
       <div className="overlay">

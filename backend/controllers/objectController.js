@@ -23,23 +23,35 @@ exports.modifyObject = async (req, res, next) => {
   try {
     const objectToUpdate = await Object.findOne({ _id: req.params.id });
 
-    const newObject = req.body;
+    if (req.file) {
+      const newObject = req.body;
+      if (newObject.imageUrl !== objectToUpdate) {
+        const filename = objectToUpdate.imageUrl.split("/images/")[1];
+        fs.unlink(`images/${filename}`, async () => {
+          await Object.updateOne(
+            { _id: req.params.id },
 
-    if (newObject.imageUrl !== objectToUpdate) {
-      const filename = objectToUpdate.imageUrl.split("/images/")[1];
-      fs.unlink(`images/${filename}`, async () => {
-        await Object.updateOne(
-          { _id: req.params.id },
+            {
+              imageUrl: `${req.protocol}://${req.get("host")}/images/${
+                req.file.filename
+              }`,
+              ...newObject,
+            }
+          );
+          res.status(201).json({ message: "Your object has been updated ! " });
+        });
+      }
+    } else {
+      console.log("no image");
+      const newObject = req.body;
+      await Object.updateOne(
+        { _id: req.params.id },
 
-          {
-            imageUrl: `${req.protocol}://${req.get("host")}/images/${
-              req.file.filename
-            }`,
-            ...newObject,
-          }
-        );
-        res.status(201).json({ message: "Your object has been updated ! " });
-      });
+        {
+          ...newObject,
+        }
+      );
+      res.status(201).json({ message: "Your object has been updated ! " });
     }
   } catch (error) {
     console.log(error);

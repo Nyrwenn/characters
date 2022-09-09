@@ -1,0 +1,43 @@
+@import './mixins';
+
+.card_wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background: blue;
+    justify-content: space-between;
+}
+
+.img_container{
+    width: 90%;
+    @include center;
+   height: 200px;
+    margin-top: 10px;
+    background: pink;
+    overflow: hidden;
+
+}
+
+.img{
+    @include fullWidth;
+    object-fit: contain;
+    height: 100%;
+   
+}
+
+.info_container{
+    margin-left: 2%;
+    background: lightsalmon;
+    @include FC;    
+
+}
+
+.icon{
+    display: flex; 
+    align-self: flex-end;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    font-size: 20px;
+    background: yellow;
+}
